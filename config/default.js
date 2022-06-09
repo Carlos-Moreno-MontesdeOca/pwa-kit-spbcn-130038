@@ -59,7 +59,8 @@ module.exports = {
         proxyConfigs: [
             {
                 host: 'kv7kzm78.api.commercecloud.salesforce.com',
-                path: 'api'
+                path: 'api',
+                protocol: 'https'
             },
             {
                 host: 'zzrb-310.sandbox.us01.dx.commercecloud.salesforce.com',

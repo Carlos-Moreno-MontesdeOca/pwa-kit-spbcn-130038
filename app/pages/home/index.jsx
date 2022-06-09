@@ -55,7 +55,7 @@ const Home = ({productSearchResult, isLoading}) => {
 
             <Hero
                 title={intl.formatMessage({
-                    defaultMessage: 'The React PWA Starter Store for Retail',
+                    defaultMessage: 'La super página de Carlos Moreno!! (:',
                     id: 'home.title.react_starter_store'
                 })}
                 img={{
@@ -80,6 +80,47 @@ const Home = ({productSearchResult, isLoading}) => {
                     </Stack>
                 }
             />
+            <Section
+            //Workbench!!!!
+                padding={4}
+                paddingTop={32}
+                title={intl.formatMessage({
+                    defaultMessage: "We're here to help",
+                    id: 'home.heading.here_to_help'
+                })}
+                subtitle={
+                    <>
+                        <>
+                            {intl.formatMessage({
+                                defaultMessage: 'Contact our support staff.',
+                                id: 'home.description.contact_our_staff'
+                            })}
+                        </>
+                        <br />
+                        <>
+                            {intl.formatMessage({
+                                defaultMessage: 'They will get you to the right place.',
+                                id: 'home.description.get_you_to_the_right_place'
+                            })}
+                        </>
+                    </>
+                }
+                actions={
+                    <Button
+                        as={Link}
+                        href="https://help.salesforce.com/s/?language=en_US"
+                        target="_blank"
+                        width={'auto'}
+                        paddingX={7}
+                        _hover={{textDecoration: 'none'}}
+                    >
+                        <FormattedMessage defaultMessage="Contact Us" id="home.link.contact_us" />
+                    </Button>
+                }
+                maxWidth={'xl'}
+            //Workbench!!!!
+            />
+
 
             <Section
                 background={'gray.50'}
