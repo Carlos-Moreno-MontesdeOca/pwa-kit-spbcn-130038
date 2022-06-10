@@ -11,6 +11,8 @@ import {useIntl, FormattedMessage} from 'react-intl'
 
 // Components
 import {
+    Alert,
+    AlertIcon,
     Box,
     Button,
     SimpleGrid,
@@ -36,6 +38,21 @@ import {heroFeatures, features} from './data'
 // Constants
 import {HOME_SHOP_PRODUCTS_CATEGORY_ID, HOME_SHOP_PRODUCTS_LIMIT} from '../../constants'
 
+import HomeSlider from '../../components/slider'
+
+//Custom Components
+const MyHeader = ({name}) => {
+    return (
+        <Box>
+            <h1>Hola, {name}</h1>
+            <Alert padding="10" status="success">
+                <AlertIcon />
+                Componente con Chakra UI!
+            </Alert>
+        </Box>
+    )
+}
+
 /**
  * This is the home page for Retail React App.
  * The page is created for demonstration purposes.
@@ -52,7 +69,8 @@ const Home = ({productSearchResult, isLoading}) => {
                 description="Commerce Cloud Retail React App"
                 keywords="Commerce Cloud, Retail React App, React Storefront"
             />
-
+            <MyHeader name="Carlos" />
+            <HomeSlider />
             <Hero
                 title={intl.formatMessage({
                     defaultMessage: 'La super página de Carlos Moreno!! (:',
@@ -80,47 +98,6 @@ const Home = ({productSearchResult, isLoading}) => {
                     </Stack>
                 }
             />
-            <Section
-            //Workbench!!!!
-                padding={4}
-                paddingTop={32}
-                title={intl.formatMessage({
-                    defaultMessage: "We're here to help",
-                    id: 'home.heading.here_to_help'
-                })}
-                subtitle={
-                    <>
-                        <>
-                            {intl.formatMessage({
-                                defaultMessage: 'Contact our support staff.',
-                                id: 'home.description.contact_our_staff'
-                            })}
-                        </>
-                        <br />
-                        <>
-                            {intl.formatMessage({
-                                defaultMessage: 'They will get you to the right place.',
-                                id: 'home.description.get_you_to_the_right_place'
-                            })}
-                        </>
-                    </>
-                }
-                actions={
-                    <Button
-                        as={Link}
-                        href="https://help.salesforce.com/s/?language=en_US"
-                        target="_blank"
-                        width={'auto'}
-                        paddingX={7}
-                        _hover={{textDecoration: 'none'}}
-                    >
-                        <FormattedMessage defaultMessage="Contact Us" id="home.link.contact_us" />
-                    </Button>
-                }
-                maxWidth={'xl'}
-            //Workbench!!!!
-            />
-
 
             <Section
                 background={'gray.50'}
