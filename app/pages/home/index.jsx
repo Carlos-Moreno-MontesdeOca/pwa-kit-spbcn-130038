@@ -22,7 +22,8 @@ import {
     Flex,
     Stack,
     Container,
-    Link
+    Link,
+    Progress
 } from '@chakra-ui/react'
 
 // Project Components
@@ -70,6 +71,7 @@ const Home = ({productSearchResult, isLoading}) => {
                 keywords="Commerce Cloud, Retail React App, React Storefront"
             />
             <MyHeader name="Carlos" />
+            <Progress size="xs" isIndeterminate />
             <HomeSlider />
             <Hero
                 title={intl.formatMessage({
@@ -77,7 +79,7 @@ const Home = ({productSearchResult, isLoading}) => {
                     id: 'home.title.react_starter_store'
                 })}
                 img={{
-                    src: getAssetUrl('static/img/hero.png'),
+                    src: getAssetUrl('static/img/osf.digital.png'),
                     alt: 'npx pwa-kit-create-app'
                 }}
                 actions={
