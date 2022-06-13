@@ -636,8 +636,8 @@
   "home.link.contact_us": {
     "defaultMessage": "Contact Us"
   },
-  "home.link.get_started": {
-    "defaultMessage": "Get started"
+  "home.link.goto_seach_page": {
+    "defaultMessage": "Let's try isomorphic code with a Content Page custom component"
   },
   "home.link.read_docs": {
     "defaultMessage": "Read docs"

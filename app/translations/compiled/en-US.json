@@ -1533,10 +1533,10 @@
       "value": "Contact Us"
     }
   ],
-  "home.link.get_started": [
+  "home.link.goto_seach_page": [
     {
       "type": 0,
-      "value": "Get started"
+      "value": "Let's try isomorphic code with a Content Page custom component"
     }
   ],
   "home.link.read_docs": [
