@@ -17,7 +17,7 @@ const HomeSlider = () => {
     }
     return (
         <Box pt={6} pb={2}>
-             <span>Que tanto te está gustando esta aplicación de OSF?</span>
+             <span>How much are you liking this OSF page?</span>
             <Slider aria-label='slider-ex-6' onChange={(val) => setSliderValue(val)}>
                 <SliderMark value={25} {...labelStyles}>
                     25%

@@ -8,6 +8,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {useIntl, FormattedMessage} from 'react-intl'
+import {getAppOrigin} from 'pwa-kit-react-sdk/utils/url'
 
 // Components
 import {
@@ -45,10 +46,12 @@ import HomeSlider from '../../components/slider'
 const MyHeader = ({name}) => {
     return (
         <Box>
-            <h1>Hola, {name}</h1>
+            <h1>
+                Hello, <mark>{name}</mark>
+            </h1>
             <Alert padding="10" status="success">
                 <AlertIcon />
-                Componente con Chakra UI!
+                Component made using Chakra UI!
             </Alert>
         </Box>
     )
@@ -70,12 +73,12 @@ const Home = ({productSearchResult, isLoading}) => {
                 description="Commerce Cloud Retail React App"
                 keywords="Commerce Cloud, Retail React App, React Storefront"
             />
-            <MyHeader name="Carlos" />
+            <MyHeader name="TODO: Dinamically pass user name/If not logged in: pass 'not logged user'" />
             <Progress size="xs" isIndeterminate />
             <HomeSlider />
             <Hero
                 title={intl.formatMessage({
-                    defaultMessage: 'La super página de Carlos Moreno!! (:',
+                    defaultMessage: "Carlos Moreno's awesome page!",
                     id: 'home.title.react_starter_store'
                 })}
                 img={{
@@ -86,15 +89,15 @@ const Home = ({productSearchResult, isLoading}) => {
                     <Stack spacing={{base: 4, sm: 6}} direction={{base: 'column', sm: 'row'}}>
                         <Button
                             as={Link}
-                            href="https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/getting-started.html"
+                            href={`${getAppOrigin()}/en-GB/content-search`}
                             target="_blank"
                             width={{base: 'full', md: 'inherit'}}
                             paddingX={7}
                             _hover={{textDecoration: 'none'}}
                         >
                             <FormattedMessage
-                                defaultMessage="Get started"
-                                id="home.link.get_started"
+                                defaultMessage="Let's try isomorphic code with a Content Page custom component"
+                                id="home.link.goto_seach_page"
                             />
                         </Button>
                     </Stack>

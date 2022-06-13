@@ -16,7 +16,8 @@ const ContentSearch = (contentResult) => {
             {hits.length ? (
                 <List>
                     {hits.map(({id, name}) => (
-                        <Link key={id} to={`/content/${id}`}>
+                        //Locale is hardTyped. TODO: Find how to pass that locale dinamically
+                        <Link key={id} to={`/en-GB/content/${id}`}>
                             <ListItem>{name}</ListItem>
                         </Link>
                     ))}
