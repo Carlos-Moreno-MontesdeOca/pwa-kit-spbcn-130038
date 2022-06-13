@@ -14,7 +14,7 @@ const ContentDetails = ({contentResult}) => {
 ContentDetails.getProps = async ({params}) => {
     let contentResult
     const result = await fetch(
-        `${getAppOrigin}/mobify/proxy/ocapi/s/RefArchGlobal/dw/shop/v20_2/content/${params.id}?client_id=58607e6a-9281-4bb1-ab3d-29bd72a2bea1`
+        `${getAppOrigin()}/mobify/proxy/ocapi/s/RefArchGlobal/dw/shop/v20_2/content/${params.id}?client_id=58607e6a-9281-4bb1-ab3d-29bd72a2bea1`
     )
     if (result.ok) {
         contentResult = await result.json()

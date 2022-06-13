@@ -31,7 +31,7 @@ const ContentSearch = (contentResult) => {
 ContentSearch.getProps = async () => {
     let contentResult
     const res = await fetch(
-        `${getAppOrigin}/mobify/proxy/ocapi/s/RefArchGlobal/dw/shop/v20_2/content_search?q=about&client_id=58607e6a-9281-4bb1-ab3d-29bd72a2bea1`
+        `${getAppOrigin()}/mobify/proxy/ocapi/s/RefArchGlobal/dw/shop/v20_2/content_search?q=about&client_id=58607e6a-9281-4bb1-ab3d-29bd72a2bea1`
     )
     if (res.ok) {
         contentResult = await res.json()
